@@ -1,0 +1,24 @@
+/* || MENU ITENS STYLE */
+
+#menu-size{
+    height: 120px;
+    padding: 1% 1% 1% 15%;
+}
+
+#menu-text-area{
+    display: inline-block;
+    width: 90%;
+    color: var(--menu-text-primary-color);
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+#menu-logo-area{
+    display: inline-block;
+    width: 10%;
+}
+
+
+.menu-logo-company{
+    height: 50px;
+    margin: 0 75px;
+}

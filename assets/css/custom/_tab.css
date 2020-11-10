@@ -1,0 +1,26 @@
+
+        #tab-list{
+            display:inline-flex;
+        }
+
+        #tab-list > .nav-item> .nav-link{
+            color:var(--secundary-color);
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin-left: 25px;
+         }
+
+         #tab-list > .nav-item> .nav-link:hover{
+            color: white;
+      background-color: var(--primary-color);
+      border: solid 1px var(--primary-color);
+      border-left: 5px solid var(--primary-color);
+    }
+
+         #tab-list > .nav-item> .nav-link.active{
+           
+           color: white;
+      background-color: var(--primary-color);
+      border: solid 1px var(--primary-color);
+      border-left: 5px solid var(--primary-color);
+           }

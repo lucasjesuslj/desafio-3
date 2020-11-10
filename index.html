@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+      <title>Painel Itaú</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">-->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="assets/css/custom/custom.css?v=5">
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <!--<script src="../js/jquery3.5.js"></script>-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <!--<script src="../js/bootstrap.js"></script>-->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+      <script type="text/javascript" src="assets/js/lancamentos.js"></script>  
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <nav id="menu-size" class="navbar navbar-light bg-default">
+            <div id="menu-logo-area">
+                <img class="menu-logo-company m-auto" src="assets/images/logo-empresa.png"/>
+            </div>
+            <div id="menu-text-area">
+               <p class="m-auto">Cartão de Crédito - <span>Lançamentos<span></p>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col-md-12 text-center content-section" >
+                    <ul class="nav nav-pills mb-4 mt-4" id="tab-list" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-Geral-tab" data-toggle="pill" href="#pills-Geral" role="tab" aria-controls="pills-Geral" aria-selected="true">Geral</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-mes-tab" data-toggle="pill" href="#pills-mes" role="tab" aria-controls="pills-mes" aria-selected="false">Por Mês</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-categoria-tab" data-toggle="pill" href="#pills-categoria" role="tab" aria-controls="pills-categoria" aria-selected="false">Por Categoria</a>
+                        </li>
+                      </ul>  
+                </div>
+                <div class="col-md-12 text-center mt-2 content-section">
+                    <div class="tab-content" id="tab-listContent">
+                        <div class="tab-pane fade show active" id="pills-Geral" role="tabpanel" aria-labelledby="pills-Geral-tab">
+                            <div class="row mt-4">
+                                <div class="col-md-12 text-center">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">ID</th>
+                                                <th scope="col">Valor</th>
+                                                <th scope="col">Origem</th>
+                                                <th scope="col">Categoria</th>
+                                                <th scope="col">Mês</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="list-geral">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="pills-mes" role="tabpanel" aria-labelledby="pills-mes-tab">
+                            <div class="row mt-4">
+                                <div class="col-md-12 mb-3 text-center"  id="filter-per-month">
+                                    
+                                    <input type="checkbox" class="monsths" id="janeiro" name="janeiro" data-target="1" >
+                                    <label class="button-default" id="label-janeiro"for="janeiro" >Janeiro</label>
+                                    
+                                    <input type="checkbox" class="monsths" id="fevereiro" name="fevereiro" data-target="2">
+                                    <label class="button-default" id="label-fevereiro"for="fevereiro">fevereiro</label>
+                                  
+
+                                    <input type="checkbox" class="monsths" id="marco" name="marco" data-target="3">
+                                    <label class="button-default" id="label-marco"for="marco">março</label>
+
+                                    <input type="checkbox" class="monsths" id="abril" name="abril" data-target="4">
+                                    <label class="button-default" id="label-abril"for="abril">abril</label>
+
+                                    <input type="checkbox" class="monsths" id="maio" name="maio" data-target="5">
+                                    <label class="button-default" id="label-maio"for="maio">maio</label>
+
+                                    <input type="checkbox" class="monsths" id="junho" name="junho" data-target="6">
+                                    <label class="button-default" id="label-junho"for="junho">junho</label>
+                                    <br>
+                                    <input type="checkbox" class="monsths" id="julho" name="julho" data-target="7">
+                                    <label class="button-default" id="label-julho"for="julho">julho</label>
+
+                                    <input type="checkbox" class="monsths" id="agosto" name="agosto" data-target="8">
+                                    <label class="button-default" id="label-agosto"for="agosto">agosto</label>
+
+                                    <input type="checkbox" class="monsths" id="setembro" name="setembro" data-target="9">
+                                    <label class="button-default" id="label-setembro"for="setembro">setembro</label>
+
+                                    <input type="checkbox" class="monsths" id="outubro" name="outubro" data-target="10">
+                                    <label class="button-default" id="label-outubro"for="outubro">outubro</label>
+
+                                    <input type="checkbox" class="monsths" id="novembro" name="novembro" data-target="11">
+                                    <label class="button-default" id="label-novembro"for="novembro">novembro</label>
+
+                                    <input type="checkbox" class="monsths" id="dezembro" name="dezembro" data-target="12">
+                                    <label class="button-default" id="label-dezembro"for="dezembro">dezembro</label>
+                                    
+                                </div>
+                                <hr>
+                                <div class="col-md-12 text-center" >
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">ID</th>
+                                                <th scope="col">Valor</th>
+                                                <th scope="col">Origem</th>
+                                                <th scope="col">Categoria</th>
+                                                <th scope="col">Mês</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="list-mes">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-categoria" role="tabpanel" aria-labelledby="pills-categoria-tab">
+                            <div class="row mt-4">
+                                <div class="col-md-12 mb-3 text-center"  id="filter-per-category">
+                                    <input type="checkbox" class="category" id="transporte" name="transporte" data-target="1" >
+                                    <label class="button-default" id="label-transporte"for="transporte" >Transporte</label>
+                                    
+                                    <input type="checkbox" class="category" id="compras" name="compras" data-target="2">
+                                    <label class="button-default" id="label-compras"for="compras">Compras Online</label>
+                                  
+
+                                    <input type="checkbox" class="category" id="saude" name="saude" data-target="3">
+                                    <label class="button-default" id="label-saude"for="saude">Saúde e Beleza</label>
+
+                                    <input type="checkbox" class="category" id="servicos-auto" name="servicos-auto" data-target="4">
+                                    <label class="button-default" id="label-servicos-auto"for="servicos-auto">Serviços Automotivos</label>
+
+                                    <input type="checkbox" class="category" id="restaurante" name="restaurante" data-target="5">
+                                    <label class="button-default" id="label-restaurante"for="restaurante">Restaurantes</label>
+
+                                    <input type="checkbox" class="category" id="supermercado" name="supermercado" data-target="6">
+                                    <label class="button-default" id="label-supermercado"for="supermercado">Super Mercados</label>
+                                    <br>
+                                </div>
+                                <hr>
+                                <div class="col-md-12 text-center" >
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">ID</th>
+                                                <th scope="col">Valor</th>
+                                                <th scope="col">Origem</th>
+                                                <th scope="col">Categoria</th>
+                                                <th scope="col">Mês</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="list-category">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
